@@ -1,6 +1,9 @@
 package week6controlflow;
 
+import java.lang.reflect.Array;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class AsciiChars {
 	
@@ -95,11 +98,15 @@ public class AsciiChars {
 				magicBall = magicBall % POWER_BALL;
 			}
 			//non-magic numbers
+			Set<Integer> set = new HashSet<>();
 			int num1 = ((int) name2.charAt(3)) % NON_MAGIC_NUM_MAX;
 			int num2 = (name6 + name4) % NON_MAGIC_NUM_MAX;
 			int num3 = name8 % NON_MAGIC_NUM_MAX;
 			int num4 = ((int) name7.charAt(0)) % NON_MAGIC_NUM_MAX;
 			int num5 = ((int) name7.charAt(name7.length() - 1)) % NON_MAGIC_NUM_MAX;
+			int num6 = 42;
+			int num7 = (name3 + name6) % NON_MAGIC_NUM_MAX;
+			int num8 = (name5 + name3 + name4) % NON_MAGIC_NUM_MAX;
 			
 			System.out.printf("Lottery numbers: %d, %d, %d, %d, %d Magic ball: %d\n", num1, num2, num3, num4, num5, magicBall);
 			
